@@ -84,6 +84,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/enviroment/floating_text.gd"
 }, {
+"base": "Control",
+"class": "InventoryContainer",
+"language": "GDScript",
+"path": "res://scripts/interface/player/inventory_container.gd"
+}, {
 "base": "EnemyTemplate",
 "class": "Lacaio",
 "language": "GDScript",
@@ -140,6 +145,7 @@ _global_script_class_icons={
 "EnemyTemplate": "",
 "EnemyTexture": "",
 "FloatText": "",
+"InventoryContainer": "",
 "Lacaio": "",
 "LacaioTexture": "",
 "Level": "",
