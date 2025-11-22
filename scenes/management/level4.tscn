@@ -1,0 +1,283 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://scenes/enviroment/background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/metalfencedeco.tres" type="TileSet" id=2]
+[ext_resource path="res://resources/dirtfloortres.tres" type="TileSet" id=3]
+[ext_resource path="res://resources/housestres.tres" type="TileSet" id=4]
+[ext_resource path="res://scenes/enviroment/backmask.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resources/houseoutdecotres.tres" type="TileSet" id=6]
+[ext_resource path="res://assets/decoration/watchbase.tres" type="TileSet" id=7]
+[ext_resource path="res://scenes/player/player(macaco).tscn" type="PackedScene" id=8]
+[ext_resource path="res://resources/treeslogs.tres" type="TileSet" id=9]
+[ext_resource path="res://assets/decoration/Campfire/fire1.png" type="Texture" id=10]
+[ext_resource path="res://assets/decoration/Campfire/fire4.png" type="Texture" id=11]
+[ext_resource path="res://assets/decoration/Campfire/fire6.png" type="Texture" id=12]
+[ext_resource path="res://scripts/management/level1.gd" type="Script" id=13]
+[ext_resource path="res://assets/decoration/Campfire/fire7.png" type="Texture" id=14]
+[ext_resource path="res://assets/decoration/Campfire/fire5.png" type="Texture" id=15]
+[ext_resource path="res://assets/decoration/Campfire/fire2.png" type="Texture" id=16]
+[ext_resource path="res://assets/decoration/Campfire/fire3.png" type="Texture" id=17]
+[ext_resource path="res://assets/decoration/Campfire/fire8.png" type="Texture" id=18]
+[ext_resource path="res://assets/effect/light.png" type="Texture" id=19]
+[ext_resource path="res://scenes/enemy/boss_man.tscn" type="PackedScene" id=20]
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+glow_enabled = true
+glow_hdr_threshold = 1.5
+
+[node name="level" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="leveldesign" type="Node2D" parent="."]
+
+[node name="fencedeco" type="TileMap" parent="leveldesign"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0 )
+
+[node name="fencedeco2" type="TileMap" parent="leveldesign"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0 )
+
+[node name="tree" type="TileMap" parent="leveldesign"]
+position = Vector2( 114, -3 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 2, 0, 65539, 2, 0 )
+
+[node name="tree2" type="TileMap" parent="leveldesign"]
+position = Vector2( 100, -5 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 2, 0, 65539, 2, 0 )
+
+[node name="tree3" type="TileMap" parent="leveldesign"]
+position = Vector2( 148, -1 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 2, 0 )
+
+[node name="tree4" type="TileMap" parent="leveldesign"]
+position = Vector2( 129, -1 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 2, 0 )
+
+[node name="campfire" type="AnimatedSprite" parent="leveldesign"]
+position = Vector2( 268, 126 )
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 16 )
+animation = "Idle"
+frame = 4
+speed_scale = 2.5
+playing = true
+
+[node name="Light" type="Light2D" parent="leveldesign/campfire"]
+texture = ExtResource( 19 )
+texture_scale = 0.3
+color = Color( 0.513726, 0.388235, 0.262745, 1 )
+
+[node name="log" type="TileMap" parent="leveldesign"]
+position = Vector2( 49, 31 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 3, 0 )
+
+[node name="log2" type="TileMap" parent="leveldesign"]
+position = Vector2( 14, 31 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 0, 0 )
+
+[node name="watchbase" type="TileMap" parent="leveldesign"]
+position = Vector2( -260, -34 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 65538, 0, 0 )
+
+[node name="watchbase2" type="TileMap" parent="leveldesign"]
+position = Vector2( -260, -63 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 65538, 0, 0 )
+
+[node name="watchbase3" type="TileMap" parent="leveldesign"]
+position = Vector2( -260, -5 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 65538, 0, 0 )
+
+[node name="floor" type="TileMap" parent="leveldesign"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262144, 2, 0, 262145, 2, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 2, 0, 262152, 2, 0, 262153, 2, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0 )
+
+[node name="housevinhas4" type="TileMap" parent="leveldesign"]
+position = Vector2( 138, -24 )
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 851953, 1, 0, 851954, 2, 0, 851959, 1, 0, 851964, 2, 0, 786433, 1, 0, 917505, 1, 0 )
+
+[node name="watchwall" type="TileMap" parent="leveldesign"]
+position = Vector2( -286, 29 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 2, 1, 0 )
+
+[node name="watchwall4" type="TileMap" parent="leveldesign"]
+position = Vector2( -238, 17 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 2, 1, 0 )
+
+[node name="watchwall3" type="TileMap" parent="leveldesign"]
+position = Vector2( -286, 18 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 2, 1, 0 )
+
+[node name="watchwall2" type="TileMap" parent="leveldesign"]
+position = Vector2( -238, 28 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 2, 1, 0 )
+
+[node name="watchfloor" type="TileMap" parent="leveldesign"]
+position = Vector2( -286, 57 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 2, 2, 0 )
+
+[node name="watchfloor2" type="TileMap" parent="leveldesign"]
+position = Vector2( -261, 57 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 2, 2, 0 )
+
+[node name="watchfloor3" type="TileMap" parent="leveldesign"]
+position = Vector2( -256, 57 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( 2, 2, 0 )
+
+[node name="watchroof" type="TileMap" parent="leveldesign"]
+position = Vector2( -269, -13 )
+scale = Vector2( 1.2, 1.2 )
+tile_set = ExtResource( 4 )
+format = 1
+tile_data = PoolIntArray( 3, 2, 0 )
+
+[node name="invisible" type="TileMap" parent="leveldesign"]
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible2" type="TileMap" parent="leveldesign"]
+position = Vector2( 0, -35 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible3" type="TileMap" parent="leveldesign"]
+position = Vector2( 1, -56 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible4" type="TileMap" parent="leveldesign"]
+position = Vector2( 320, -3 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible5" type="TileMap" parent="leveldesign"]
+position = Vector2( 320, -38 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible6" type="TileMap" parent="leveldesign"]
+position = Vector2( 321, -59 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="background" parent="." instance=ExtResource( 1 )]
+can_process = true
+layer_speed = [ 5, 5, 0, 0 ]
+
+[node name="backmask2" parent="background" instance=ExtResource( 5 )]
+color = Color( 0.721569, 0.721569, 0.721569, 1 )
+
+[node name="backmask" parent="." instance=ExtResource( 5 )]
+color = Color( 0.796078, 0.796078, 0.796078, 1 )
+
+[node name="player(macaco)" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9, 49 )
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="BossMan" parent="Enemy" instance=ExtResource( 20 )]
+position = Vector2( 286, 97 )
