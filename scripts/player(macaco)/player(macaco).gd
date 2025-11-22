@@ -71,10 +71,10 @@ func attack() -> void:
 	if Input.is_action_just_pressed("attack") and attack_condition and is_on_floor():
 		attacking = true
 		player_sprite.normal_attack = true
-	elif Input.is_action_just_pressed("magic_attack") and attack_condition and stats.current_mana >= magic_attack_cost:
-		attacking = true
-		player_sprite.magic_attack = true
-		stats.update_mana("Decrease", magic_attack_cost)
+	#elif Input.is_action_just_pressed("magic_attack") and attack_condition and stats.current_mana >= magic_attack_cost:
+		#attacking = true
+		#player_sprite.magic_attack = true
+		#stats.update_mana("Decrease", magic_attack_cost)
 
 func gravity(delta: float) -> void:
 	if next_to_wall():

@@ -52,10 +52,9 @@ script = ExtResource( 10 )
 [node name="leveldesign" type="Node2D" parent="."]
 
 [node name="torches" type="AnimatedSprite" parent="leveldesign"]
-position = Vector2( 82, 74 )
+position = Vector2( 84, 73 )
 frames = SubResource( 1 )
 animation = "torch"
-frame = 2
 playing = true
 
 [node name="Light" type="Light2D" parent="leveldesign/torches"]
@@ -68,7 +67,7 @@ energy = 1.5
 position = Vector2( 232, 72 )
 frames = SubResource( 1 )
 animation = "torch"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Light" type="Light2D" parent="leveldesign/torches2"]
@@ -95,7 +94,7 @@ position = Vector2( 201, 137 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 1
+frame = 2
 playing = true
 
 [node name="rat2" type="AnimatedSprite" parent="leveldesign"]
@@ -103,7 +102,7 @@ position = Vector2( 234, 137 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
