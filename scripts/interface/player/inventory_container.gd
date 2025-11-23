@@ -12,7 +12,7 @@ var is_visible: bool = false
 
 var item_index:int
 
-var slot_item_info: Array =[
+var slot_item_info: Array = [
 	"",
 	"",
 	"",
@@ -38,7 +38,7 @@ func update_slot(item_name: String, item_image: StreamTexture, item_info: Array)
 	var existing_item_index: int = slot_list.find(item_name)
 	if existing_item_index != -1:
 		var item_slot: TextureRect = slot_container.get_child(existing_item_index) 
-		if item_slot.amount < 9 and item_slot.type != "Equipment" and item_slot.item_type != "Weapon":
+		if item_slot.amount < 9:
 			var current_amount: int = item_slot.amount + item_info[4]
 			if current_amount > 9:
 				var leftover: int = current_amount - 9

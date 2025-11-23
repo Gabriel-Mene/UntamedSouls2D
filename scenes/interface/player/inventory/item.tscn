@@ -31,16 +31,16 @@ rect_min_size = Vector2( 40, 40 )
 texture = ExtResource( 1 )
 expand = true
 
-[node name="Amount" type="Label" parent="ItemTexture"]
+[node name="Amount" type="Label" parent="."]
 visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -3.0
-margin_top = -9.0
-margin_right = 2.0
-margin_bottom = 3.0
+margin_left = -8.0
+margin_top = -14.0
+margin_right = -3.0
+margin_bottom = -2.0
 rect_min_size = Vector2( 4, 7 )
 custom_fonts/font = SubResource( 1 )
 text = "9"

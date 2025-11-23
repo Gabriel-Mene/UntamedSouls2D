@@ -13,6 +13,7 @@ onready var item_index: int = get_index()
 var type_value: int
 var sell_price:int
 
+
 var amount: int = 0
 
 var can_click: bool = false
@@ -47,7 +48,7 @@ func on_mouse_exited() -> void:
 	modulate.a = 1.0
 
 func update_item(item: String, item_image: StreamTexture, item_info: Array) -> void:
-	item_image_path = item_info[0]
+	item_image_path = item_info[1]
 	item_type = item_info[1]
 	
 	match item_type:

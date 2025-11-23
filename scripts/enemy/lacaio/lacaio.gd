@@ -8,10 +8,10 @@ func _ready() -> void:
 	drop_list = {
 		"Heal Banana": [
 			"res://assets/item/consumable/healingbanana.png",
-			70, #chance
+			70,
 			"Health",
-			5, #cura
-			5#valor
+			5, 
+			5 
 		],
 		
 		"Normal Banana": [
