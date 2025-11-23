@@ -72,7 +72,6 @@ func update_item(item: String, item_image: StreamTexture, item_info: Array) -> v
 			amount += item_info[4]
 			type_value = item_info[2]
 	
-	sell_price = item_info[3]
 	
 	item_name = item
 	item_amount.text = str(amount)
