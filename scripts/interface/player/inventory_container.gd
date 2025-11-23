@@ -42,7 +42,7 @@ func _ready() -> void:
 		
 	for children in slot_container.get_children():
 		children.connect("empty_slot", self, "empty_slot")
-		children.connect("item_click", self, "on_item_clicked")
+		children.connect("item_clicked", self, "on_item_clicked")
 		
 		
 		
