@@ -42,7 +42,7 @@ func _ready() -> void:
 		
 	for children in slot_container.get_children():
 		children.connect("empty_slot", self, "empty_slot")
-		
+		children.connect("item_click", self, "on_item_clicked")
 		
 		
 		
@@ -96,12 +96,12 @@ func reset() -> void:
 	can_click = false
 	current_state = ""
 	aux_animation.play("hide_container")
-	
-	
 	for children in slot_container.get_children():
 		children.reset()
 		
-		
+func on_item_clicked(index: int) -> void:
+	aux_animation.play("show_container")
+	item_index = index
 		
 		
 		
@@ -120,7 +120,7 @@ func mouse_interaction(state:String, object:TextureRect) -> void:
 	
 	
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("click") and can_click and current_state != "":
 		match current_state:
 			"Equip":

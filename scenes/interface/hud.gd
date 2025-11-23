@@ -5,7 +5,7 @@ onready var inventory: Control = get_node("InventoryContainer")
 func _ready():
 	inventory.visible = false  # garante que começa fechado
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("inventory"):
 		toggle_inventory()
 
