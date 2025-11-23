@@ -10,3 +10,4 @@ script = ExtResource( 3 )
 [node name="BarContainer" parent="." instance=ExtResource( 1 )]
 
 [node name="InventoryContainer" parent="." instance=ExtResource( 2 )]
+visible = true
