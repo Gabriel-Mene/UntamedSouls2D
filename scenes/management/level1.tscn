@@ -130,7 +130,7 @@ position = Vector2( 166, 128 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 1
+frame = 6
 speed_scale = 2.5
 playing = true
 
@@ -191,6 +191,7 @@ position = Vector2( 52, 103 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
 animation = "torch"
+frame = 1
 playing = true
 
 [node name="Light" type="Light2D" parent="leveldesign/torches"]
@@ -247,8 +248,6 @@ position = Vector2( 76, 124 )
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
-[node name="Hud" parent="." instance=ExtResource( 25 )]
-
 [node name="backmask" parent="." instance=ExtResource( 5 )]
 color = Color( 0.294118, 0.294118, 0.294118, 1 )
 
@@ -259,3 +258,5 @@ position = Vector2( 301, 103 )
 
 [node name="Doggy" parent="Enemy" instance=ExtResource( 26 )]
 position = Vector2( 276, 121 )
+
+[node name="Hud" parent="." instance=ExtResource( 25 )]

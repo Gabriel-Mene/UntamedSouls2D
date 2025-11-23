@@ -3,6 +3,7 @@ extends Control
 class_name InventoryContainer
 
 onready var slot_container: GridContainer = get_node("VContainer/Background/GridContainer")
+onready var animation: AnimationPlayer = get_node("Animation")
 
 var current_state:String
 

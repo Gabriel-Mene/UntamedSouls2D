@@ -23,7 +23,7 @@ var item_name: String = ""
 var item_type: String
 var item_image_path: String
 
-var texture_list: Array =[
+var texture_list: Array = [
 	"res://assets/interface/intentory/item_background/type_1.png",
 	"res://assets/interface/intentory/item_background/type_2.png",
 	"res://assets/interface/intentory/item_background/type_3.png"

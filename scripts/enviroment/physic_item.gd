@@ -54,7 +54,7 @@ func on_body_exited(_body: Player):
 	
 func _process(_delta: float) -> void:
 	if player_ref != null and Input.is_action_just_pressed("interact"):
-		#emitir sinal para spawnar item
+		get_tree().call_group("inventory", "update_slot", item_name, item_texture, item_info_list)
 		spawn_effect()
 		queue_free()
 		
