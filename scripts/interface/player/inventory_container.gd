@@ -4,6 +4,11 @@ class_name InventoryContainer
 
 onready var slot_container: GridContainer = get_node("VContainer/Background/GridContainer")
 onready var animation: AnimationPlayer = get_node("Animation")
+onready var aux_animation: AnimationPlayer = get_node("Container/Animation")
+onready var aux_h_container: HBoxContainer = get_node("Container/HContainer")
+
+
+
 
 var current_state:String
 
@@ -30,8 +35,16 @@ var slot_list: Array =[
 
 
 func _ready() -> void:
+	for icon in aux_h_container.get_children():
+		icon.connect("mouse_exited", self, "mouse_interaction", ["exited", icon])
+		icon.connect("mouse_entered", self, "mouse_interaction", ["entered",icon])
+		
+		
 	for children in slot_container.get_children():
 		children.connect("empty_slot", self, "empty_slot")
+		
+		
+		
 		
 		
 func update_slot(item_name: String, item_image: StreamTexture, item_info: Array) -> void:
@@ -78,4 +91,49 @@ func empty_slot(index:int) -> void:
 	slot_item_info[index] = ""
 		
 		
+func reset() -> void:
+	item_index = -1
+	can_click = false
+	current_state = ""
+	aux_animation.play("hide_container")
+	
+	
+	for children in slot_container.get_children():
+		children.reset()
+		
+		
+		
+		
+		
+		
+func mouse_interaction(state:String, object:TextureRect) -> void:
+	match state:
+		"entered":
+			can_click = true
+			object.modulate.a = 0.5
+			current_state = object.name
+		
+		"exited":
+			can_click = false
+			current_state = ""
+			object.modulate.a = 1.0
+	
+	
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("click") and can_click and current_state != "":
+		match current_state:
+			"Equip":
+				slot_container.get_child(item_index).equip_item()
+				
+				
+			"Delete":
+				slot_container.get_child(item_index).update_slot()
+	
+		item_index = -1
+		current_state = ""
+		aux_animation.play("hide_container")
+	
+	
+	
 

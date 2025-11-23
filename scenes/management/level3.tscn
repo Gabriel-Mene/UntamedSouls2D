@@ -84,7 +84,7 @@ position = Vector2( 46, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 35
+frame = 12
 playing = true
 flip_h = true
 
@@ -99,7 +99,7 @@ position = Vector2( 76, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 35
+frame = 12
 playing = true
 flip_h = true
 
@@ -114,7 +114,7 @@ position = Vector2( 108, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 34
+frame = 11
 playing = true
 flip_h = true
 
@@ -129,7 +129,7 @@ position = Vector2( 139, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 34
+frame = 11
 playing = true
 flip_h = true
 
@@ -144,7 +144,7 @@ position = Vector2( 171, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 34
+frame = 11
 playing = true
 flip_h = true
 
@@ -159,7 +159,7 @@ position = Vector2( 203, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 34
+frame = 11
 playing = true
 flip_h = true
 
@@ -174,7 +174,7 @@ position = Vector2( 235, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 34
+frame = 11
 playing = true
 flip_h = true
 
@@ -189,7 +189,7 @@ position = Vector2( 267, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 33
+frame = 10
 playing = true
 flip_h = true
 
@@ -204,7 +204,7 @@ position = Vector2( 299, 152 )
 rotation = 4.71239
 frames = ExtResource( 10 )
 animation = "lava"
-frame = 33
+frame = 10
 playing = true
 flip_h = true
 
