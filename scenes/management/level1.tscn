@@ -130,7 +130,6 @@ position = Vector2( 166, 128 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 3
 speed_scale = 2.5
 playing = true
 
@@ -191,7 +190,6 @@ position = Vector2( 52, 103 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
 animation = "torch"
-frame = 2
 playing = true
 
 [node name="Light" type="Light2D" parent="leveldesign/torches"]

@@ -17,3 +17,5 @@ func armor_slot(item_texture: StreamTexture, item_info: Array) -> void:
 	
 func weapon_slot(item_texture: StreamTexture, item_info: Array) -> void:
 	weapon_container.update_weapon_slot(item_texture, item_info)
+
+
