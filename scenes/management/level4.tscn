@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://scenes/enviroment/background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/metalfencedeco.tres" type="TileSet" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://scenes/enemy/boss_man.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/interface/general/hud.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/enviroment/enemy_spawner.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/enviroment/portal.tscn" type="PackedScene" id=23]
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 10 )
@@ -109,12 +110,30 @@ tile_set = ExtResource( 9 )
 format = 1
 tile_data = PoolIntArray( 65538, 2, 0 )
 
+[node name="tree5" type="TileMap" parent="leveldesign"]
+position = Vector2( 129, -1 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 2, 0 )
+
+[node name="tree6" type="TileMap" parent="leveldesign"]
+position = Vector2( 164, 51 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="tree7" type="TileMap" parent="leveldesign"]
+position = Vector2( 148, 52 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
 [node name="campfire" type="AnimatedSprite" parent="leveldesign"]
 position = Vector2( 268, 126 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 16 )
 animation = "Idle"
-frame = 5
+frame = 4
 speed_scale = 2.5
 playing = true
 
@@ -282,10 +301,10 @@ environment = SubResource( 1 )
 [node name="Enemy" type="Node2D" parent="."]
 
 [node name="BossMan" parent="Enemy" instance=ExtResource( 20 )]
-position = Vector2( 286, 97 )
+position = Vector2( 254, 98 )
 
 [node name="EnemySpawner2" parent="Enemy" instance=ExtResource( 22 )]
-position = Vector2( 138, 118 )
+position = Vector2( 165, 120 )
 enemies_list = [ [ "res://scenes/enemy/doggy.tscn", -11.5, 1.0, 100.0 ] ]
 spawn_cooldown = 15.0
 enemy_amount = 1
@@ -294,7 +313,7 @@ right_gap_position = 70
 can_respawn = true
 
 [node name="EnemySpawner3" parent="Enemy" instance=ExtResource( 22 )]
-position = Vector2( 186, 118 )
+position = Vector2( 154, 119 )
 enemies_list = [ [ "res://scenes/enemy/lacaio.tscn", -11.5, 1.0, 100.0 ] ]
 spawn_cooldown = 15.0
 enemy_amount = 1
@@ -303,7 +322,7 @@ right_gap_position = 70
 can_respawn = true
 
 [node name="EnemySpawner4" parent="Enemy" instance=ExtResource( 22 )]
-position = Vector2( 164, 115 )
+position = Vector2( 132, 116 )
 enemies_list = [ [ "res://scenes/enemy/doggy.tscn", -11.5, 1.0, 100.0 ] ]
 spawn_cooldown = 15.0
 enemy_amount = 1
@@ -312,7 +331,7 @@ right_gap_position = 70
 can_respawn = true
 
 [node name="EnemySpawner5" parent="Enemy" instance=ExtResource( 22 )]
-position = Vector2( 212, 115 )
+position = Vector2( 180, 116 )
 enemies_list = [ [ "res://scenes/enemy/lacaio.tscn", -11.5, 1.0, 100.0 ] ]
 spawn_cooldown = 15.0
 enemy_amount = 1
@@ -321,3 +340,7 @@ right_gap_position = 70
 can_respawn = true
 
 [node name="Hud" parent="." instance=ExtResource( 21 )]
+
+[node name="Portal" parent="." instance=ExtResource( 23 )]
+position = Vector2( 334, 113 )
+next_scene = "res://scenes/management/level5.tscn"

@@ -1,0 +1,302 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://scenes/enviroment/background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/player/Idle.png" type="Texture" id=2]
+[ext_resource path="res://resources/dirtfloortres.tres" type="TileSet" id=3]
+[ext_resource path="res://scenes/enviroment/backmask.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/player/player(macaco).tscn" type="PackedScene" id=8]
+[ext_resource path="res://resources/treeslogs.tres" type="TileSet" id=9]
+[ext_resource path="res://scripts/management/level1.gd" type="Script" id=13]
+[ext_resource path="res://scenes/interface/general/hud.tscn" type="PackedScene" id=21]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 288, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 352, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 384, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 416, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 448, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 480, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 512, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 544, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+glow_enabled = true
+glow_hdr_threshold = 1.5
+
+[node name="level" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="leveldesign" type="Node2D" parent="."]
+
+[node name="tree" type="TileMap" parent="leveldesign"]
+position = Vector2( 114, -3 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131070, 6, 0, 131071, 6, 0, 65536, 6, 0, 65537, 6, 0 )
+
+[node name="log" type="TileMap" parent="leveldesign"]
+position = Vector2( 49, 31 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 3, 0 )
+
+[node name="log6" type="TileMap" parent="leveldesign"]
+position = Vector2( -37, 31 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 3, 0 )
+
+[node name="log3" type="TileMap" parent="leveldesign"]
+position = Vector2( -21, 33 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 3, 0 )
+
+[node name="log4" type="TileMap" parent="leveldesign"]
+position = Vector2( -48, 32 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 3, 0 )
+
+[node name="log5" type="TileMap" parent="leveldesign"]
+position = Vector2( -5, 32 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 3, 0 )
+
+[node name="log2" type="TileMap" parent="leveldesign"]
+position = Vector2( 14, 31 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 0, 0 )
+
+[node name="log7" type="TileMap" parent="leveldesign"]
+position = Vector2( 26, 32 )
+scale = Vector2( 0.7, 0.7 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 131077, 0, 0 )
+
+[node name="tree6" type="TileMap" parent="leveldesign"]
+position = Vector2( 161, 51 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="tree7" type="TileMap" parent="leveldesign"]
+position = Vector2( 145, 52 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="tree8" type="TileMap" parent="leveldesign"]
+position = Vector2( 28, 53 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="tree9" type="TileMap" parent="leveldesign"]
+position = Vector2( 12, 54 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="tree10" type="TileMap" parent="leveldesign"]
+position = Vector2( -47, 53 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="tree11" type="TileMap" parent="leveldesign"]
+position = Vector2( -63, 54 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="tree12" type="TileMap" parent="leveldesign"]
+position = Vector2( -47, 53 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="tree13" type="TileMap" parent="leveldesign"]
+position = Vector2( -63, 54 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 65538, 5, 0 )
+
+[node name="FamilyMonkey" type="AnimatedSprite" parent="leveldesign"]
+position = Vector2( 214, 125 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 20 )
+animation = "idle"
+frame = 3
+speed_scale = 2.0
+playing = true
+flip_h = true
+
+[node name="FamilyMonkey2" type="AnimatedSprite" parent="leveldesign"]
+position = Vector2( 205, 122 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 20 )
+animation = "idle"
+frame = 3
+speed_scale = 2.0
+playing = true
+flip_h = true
+
+[node name="FamilyMonkey3" type="AnimatedSprite" parent="leveldesign"]
+position = Vector2( 227, 119 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 20 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+flip_h = true
+
+[node name="FamilyMonkey4" type="AnimatedSprite" parent="leveldesign"]
+position = Vector2( 236, 119 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 20 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+flip_h = true
+
+[node name="floor" type="TileMap" parent="leveldesign"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262144, 2, 0, 262145, 2, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 2, 0, 262152, 2, 0, 262153, 2, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0 )
+
+[node name="invisible" type="TileMap" parent="leveldesign"]
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible2" type="TileMap" parent="leveldesign"]
+position = Vector2( 0, -35 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible3" type="TileMap" parent="leveldesign"]
+position = Vector2( 1, -56 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible4" type="TileMap" parent="leveldesign"]
+position = Vector2( 320, -3 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible5" type="TileMap" parent="leveldesign"]
+position = Vector2( 320, -38 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="invisible6" type="TileMap" parent="leveldesign"]
+position = Vector2( 321, -59 )
+tile_set = ExtResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="background" parent="." instance=ExtResource( 1 )]
+can_process = true
+layer_speed = [ 5, 5, 0, 0 ]
+
+[node name="backmask2" parent="background" instance=ExtResource( 5 )]
+color = Color( 0.721569, 0.721569, 0.721569, 1 )
+
+[node name="backmask" parent="." instance=ExtResource( 5 )]
+color = Color( 0.796078, 0.796078, 0.796078, 1 )
+
+[node name="player(macaco)" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9, 122 )
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Hud" parent="." instance=ExtResource( 21 )]
