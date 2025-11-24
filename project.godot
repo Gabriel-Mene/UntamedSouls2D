@@ -115,7 +115,7 @@ _global_script_classes=[ {
 "path": "res://scripts/enemy/lacaio/texture.gd"
 }, {
 "base": "Node2D",
-"class": "Level",
+"class": "Level0",
 "language": "GDScript",
 "path": "res://scripts/management/level0.gd"
 }, {
@@ -166,7 +166,7 @@ _global_script_class_icons={
 "InventoryContainer": "",
 "Lacaio": "",
 "LacaioTexture": "",
-"Level": "",
+"Level0": "",
 "Level1": "",
 "PhysicItem": "",
 "Player": "",

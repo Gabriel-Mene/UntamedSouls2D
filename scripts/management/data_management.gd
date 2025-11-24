@@ -1,7 +1,7 @@
 extends Node
 
 var save_path: String = "user://save.dat"
-var initial_position: Vector2 = Vector2(76, 124)
+var initial_position: Vector2 = Vector2(142, 137)
 
 var data_dictionary: Dictionary ={
 	"player_texture": "",

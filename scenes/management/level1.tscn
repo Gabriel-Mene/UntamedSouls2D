@@ -191,7 +191,6 @@ position = Vector2( 52, 103 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
 animation = "torch"
-frame = 1
 playing = true
 
 [node name="Light" type="Light2D" parent="leveldesign/torches"]
