@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/enviroment/level0background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/woodfloor2.tres" type="TileSet" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/decoration/bones.tres" type="TileSet" id=11]
 [ext_resource path="res://assets/decoration/IdleRat.png" type="Texture" id=12]
 [ext_resource path="res://resources/treeslogs.tres" type="TileSet" id=13]
+[ext_resource path="res://scenes/enviroment/portal.tscn" type="PackedScene" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -55,6 +56,7 @@ script = ExtResource( 10 )
 position = Vector2( 84, 73 )
 frames = SubResource( 1 )
 animation = "torch"
+frame = 1
 playing = true
 
 [node name="Light" type="Light2D" parent="leveldesign/torches"]
@@ -67,7 +69,6 @@ energy = 1.5
 position = Vector2( 232, 72 )
 frames = SubResource( 1 )
 animation = "torch"
-frame = 2
 playing = true
 
 [node name="Light" type="Light2D" parent="leveldesign/torches2"]
@@ -94,7 +95,7 @@ position = Vector2( 201, 137 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="rat2" type="AnimatedSprite" parent="leveldesign"]
@@ -102,7 +103,7 @@ position = Vector2( 234, 137 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
@@ -236,3 +237,7 @@ scale = Vector2( 0.1, 0.1 )
 tile_set = ExtResource( 5 )
 format = 1
 tile_data = PoolIntArray( 1179668, 12, 0 )
+
+[node name="Portal" parent="." instance=ExtResource( 14 )]
+position = Vector2( 331, 128 )
+next_scene = "res://scenes/management/level1.tscn"
