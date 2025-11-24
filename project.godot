@@ -177,7 +177,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Untamed Souls"
+run/main_scene="res://scenes/interface/initial_screen.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+data_management="*res://scripts/management/data_management.gd"
 
 [display]
 

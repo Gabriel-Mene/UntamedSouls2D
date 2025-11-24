@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/decoration/Ardentryst-Walltorch2.png" type="Texture" id=1]
+[ext_resource path="res://assets/decoration/pretooo.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/decoration/Ardentryst-Walltorch3.png" type="Texture" id=3]
+[ext_resource path="res://assets/decoration/Ardentryst-Walltorch.png" type="Texture" id=4]
+[ext_resource path="res://assets/effect/light.png" type="Texture" id=5]
+[ext_resource path="res://assets/decoration/bones.tres" type="TileSet" id=6]
+[ext_resource path="res://resources/torturetres.tres" type="TileSet" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "torch",
+"speed": 5.0
+} ]
+
+[node name="Background2" type="ParallaxBackground"]
+
+[node name="layer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 320, 0 )
+
+[node name="texture" type="TextureRect" parent="layer3"]
+margin_right = 1500.0
+margin_bottom = 500.0
+rect_pivot_offset = Vector2( 108, 91 )
+texture = ExtResource( 2 )
+
+[node name="torches" type="AnimatedSprite" parent="layer3"]
+position = Vector2( 279, 84 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "torch"
+playing = true
+
+[node name="Light" type="Light2D" parent="layer3/torches"]
+texture = ExtResource( 5 )
+texture_scale = 0.3
+color = Color( 0.513726, 0.388235, 0.262745, 1 )
+energy = 1.5
+
+[node name="skulls7" type="TileMap" parent="."]
+position = Vector2( -35, 149 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 6 )
+format = 1
+tile_data = PoolIntArray( -131070, 2, 0 )
+
+[node name="skulls3" type="TileMap" parent="."]
+position = Vector2( 82.6, 195.6 )
+scale = Vector2( 0.9, 0.9 )
+tile_set = ExtResource( 6 )
+format = 1
+tile_data = PoolIntArray( -65537, 1, 0 )
+
+[node name="skulls4" type="TileMap" parent="."]
+position = Vector2( -71, 191 )
+scale = Vector2( 0.9, 0.9 )
+tile_set = ExtResource( 6 )
+format = 1
+tile_data = PoolIntArray( -131070, 2, 0 )
+
+[node name="chain1" type="TileMap" parent="."]
+position = Vector2( -164, -1 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 4, 0, 0 )
+
+[node name="chain5" type="TileMap" parent="."]
+position = Vector2( -61, -3 )
+scale = Vector2( 1.5, 1.5 )
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 6, 4, 0, 12, 4, 0, 65542, 4, 0, 65548, 4, 0, 131078, 4, 0, 131084, 4, 0, 196614, 4, 0, 196620, 4, 0, 262150, 2, 0, 262156, 4, 0, 327692, 7, 0 )

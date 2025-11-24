@@ -107,5 +107,10 @@ func spawn_effect(effect_path: String, offset: Vector2, is_flipped: bool) -> voi
 	
 	effect_instance.play_effect()
 	
+func _exit_tree() -> void:
+	if dead == true:
+		return
 	
+	data_management.data_dictionary.player_position = global_position
+	data_management.save_data()
 	

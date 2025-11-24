@@ -94,7 +94,7 @@ position = Vector2( 201, 137 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="rat2" type="AnimatedSprite" parent="leveldesign"]
@@ -102,7 +102,7 @@ position = Vector2( 234, 137 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 

@@ -63,16 +63,16 @@ func interpolate() -> void:
 		Tween.EASE_OUT
 	)
 	
-	var _interpolate_scale_down: bool = tween.interpolate_property(
-		self,
-		"rec_scale",
-		Vector2(1.0, 1.0),
-		Vector2(0.4, 0.4),
-		1.0,
-		Tween.TRANS_LINEAR,
-		Tween.EASE_OUT,
-		0.6
-	)
+	#var _interpolate_scale_down: bool = tween.interpolate_property(
+		#self,
+		#"rec_scale",
+		#Vector2(1.0, 1.0),
+		#Vector2(0.4, 0.4),
+		#1.0,
+		#Tween.TRANS_LINEAR,
+		#Tween.EASE_OUT,
+		#0.6
+	#)
 	
 	var _start: bool = tween.start()
 	yield(tween, "tween_all_completed")

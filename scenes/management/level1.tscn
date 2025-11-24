@@ -130,6 +130,7 @@ position = Vector2( 166, 128 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 7 )
 animation = "Idle"
+frame = 6
 speed_scale = 2.5
 playing = true
 
@@ -190,6 +191,7 @@ position = Vector2( 52, 103 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
 animation = "torch"
+frame = 1
 playing = true
 
 [node name="Light" type="Light2D" parent="leveldesign/torches"]
@@ -241,7 +243,7 @@ layer_speed = [ 5, 5, 0, 0 ]
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="player(macaco)" parent="." instance=ExtResource( 8 )]
-position = Vector2( 76, 124 )
+position = Vector2( 77, 124 )
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
