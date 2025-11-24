@@ -21,7 +21,7 @@ func _ready() -> void:
 func on_button_pressed(button_name: String) -> void:
 	match button_name:
 		"Play":
-			var _change_scene: bool = get_tree().change_scene("res://scenes/management/level0.tscn")
+			var _change_scene: bool = get_tree().change_scene("res://scenes/interface/initial_cutscene.tscn")
 			
 		"Continue":
 			pass
