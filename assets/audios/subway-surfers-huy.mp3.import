@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/subway-surfers-huy.mp3-0b8bdb75dbae3e36fea781efaba86773.mp3str"
+
+[deps]
+
+source_file="res://assets/audios/subway-surfers-huy.mp3"
+dest_files=[ "res://.import/subway-surfers-huy.mp3-0b8bdb75dbae3e36fea781efaba86773.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

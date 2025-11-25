@@ -3,7 +3,6 @@ extends EnemyTexture
 class_name LacaioTexture
 
 
-
 func animate(velocity: Vector2) -> void:
 	if enemy.can_hit or enemy.can_die or enemy.can_attack:
 		action_behavior()
@@ -24,6 +23,7 @@ func action_behavior() -> void:
 		
 	elif enemy.can_attack:
 		animation.play("attack")
+		
 		
 		
 		
