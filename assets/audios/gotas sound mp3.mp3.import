@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gotas sound mp3.mp3-e7ce3826f953a34b1d3e2ee379334b22.mp3str"
+
+[deps]
+
+source_file="res://assets/audios/gotas sound mp3.mp3"
+dest_files=[ "res://.import/gotas sound mp3.mp3-e7ce3826f953a34b1d3e2ee379334b22.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

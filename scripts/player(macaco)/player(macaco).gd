@@ -6,7 +6,7 @@ class_name Player
 onready var player_sprite: Sprite = get_node("Texture")
 onready var wall_ray: RayCast2D = get_node("WallRay")
 onready var stats: Node = get_node("Stats")
-
+onready var jump_sfx = $jump_sfx as AudioStreamPlayer
 
 var velocity: Vector2  #(150, 150)
 var direction: int = 1
@@ -50,8 +50,10 @@ func horizontal_movement_env() -> void:
 func vertical_movement_env() -> void:
 	if is_on_floor() or is_on_wall():
 		jump_count = 0
+
 		
 	if Input.is_action_just_pressed("ui_up") and jump_count < 2: #espaço
+		jump_sfx.play()
 		jump_count += 1
 		spawn_effect("res://scenes/effect/dust/jump.tscn", Vector2(0, 18), flipped)
 		if next_to_wall() and not is_on_floor():

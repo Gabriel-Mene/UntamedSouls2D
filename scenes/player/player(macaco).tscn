@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assets/player/spritefinal.png" type="Texture" id=1]
 [ext_resource path="res://scripts/player(macaco)/player(macaco).gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://assets/effect/light.png" type="Texture" id=4]
 [ext_resource path="res://scripts/player(macaco)/PlayerStats.gd" type="Script" id=5]
 [ext_resource path="res://scenes/enviroment/floating_text.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/audios/187025__lloydevans09__jump1.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/audios/hit.wav" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 10, 15.75 )
@@ -449,6 +451,10 @@ attack_collision = NodePath("../AttackArea/Collision")
 animation = NodePath("../animation")
 player = NodePath("..")
 
+[node name="hit_sfx" type="AudioStreamPlayer" parent="Texture"]
+stream = ExtResource( 8 )
+volume_db = -13.109
+
 [node name="animation" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
 anims/attack_left = SubResource( 9 )
@@ -516,6 +522,10 @@ collision_mask = 0
 visible = false
 position = Vector2( 4, -2 )
 shape = SubResource( 8 )
+
+[node name="jump_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -17.0
 
 [connection signal="animation_finished" from="animation" to="Texture" method="on_animation_finished"]
 [connection signal="timeout" from="Stats/InvencibilityTimer" to="Stats" method="on_invencibility_timer_timeout"]

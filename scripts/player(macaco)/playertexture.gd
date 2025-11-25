@@ -3,6 +3,7 @@ class_name PlayerTexture
 
 signal game_over
 
+onready var hit_sfx = $hit_sfx as AudioStreamPlayer
 var normal_attack: bool = false
 var magic_attack: bool = false
 
@@ -48,6 +49,7 @@ func hit_behavior() -> void:
 		animation.play("dead")
 	elif player.on_hit:
 		animation.play("hit")
+		hit_sfx.play()
 		
 		
 	
