@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Suspense _ D&D_TTRPG Music _ 1 Hour [EApZmmYg_oQ].mp3-4ca0437fce29e97246651dcaa113f867.mp3str"
+
+[deps]
+
+source_file="res://assets/audios/Suspense _ D&D_TTRPG Music _ 1 Hour [EApZmmYg_oQ].mp3"
+dest_files=[ "res://.import/Suspense _ D&D_TTRPG Music _ 1 Hour [EApZmmYg_oQ].mp3-4ca0437fce29e97246651dcaa113f867.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
