@@ -15,8 +15,7 @@ func _ready() -> void:
 	
 	
 func on_game_over() -> void:
-	data_management.data_dictionary.player_position = data_management.initial_position
-	data_management.save_data()
+	var _realod: bool = get_tree().reload_current_scene()
 
 	
 	var _reload: bool = get_tree().reload_current_scene()
