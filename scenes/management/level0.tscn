@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/enviroment/level0background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/woodfloor2.tres" type="TileSet" id=2]
@@ -15,6 +15,10 @@
 [ext_resource path="res://resources/treeslogs.tres" type="TileSet" id=13]
 [ext_resource path="res://scenes/enviroment/portal.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/audios/gotas sound mp3.mp3" type="AudioStream" id=15]
+[ext_resource path="res://scenes/interface/general/Keys/arrow-down_noOutline.png" type="Texture" id=16]
+[ext_resource path="res://scenes/interface/general/Keys/arrow-left_noOutline.png" type="Texture" id=17]
+[ext_resource path="res://scenes/interface/general/Keys/arrow-right_noOutline.png" type="Texture" id=18]
+[ext_resource path="res://scenes/interface/general/Keys/arrow-up_noOutline.png" type="Texture" id=19]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -96,6 +100,7 @@ position = Vector2( 201, 137 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "Idle"
+frame = 1
 playing = true
 
 [node name="rat2" type="AnimatedSprite" parent="leveldesign"]
@@ -103,6 +108,7 @@ position = Vector2( 234, 137 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "Idle"
+frame = 1
 playing = true
 flip_h = true
 
@@ -221,6 +227,26 @@ position = Vector2( 321, -59 )
 tile_set = ExtResource( 13 )
 format = 1
 tile_data = PoolIntArray( 0, 4, 0, 65536, 4, 0, 131072, 4, 0 )
+
+[node name="Arrow-upNoOutline" type="Sprite" parent="leveldesign"]
+position = Vector2( 285.6, 156.6 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 19 )
+
+[node name="Arrow-downNoOutline" type="Sprite" parent="leveldesign"]
+position = Vector2( 285.6, 169.6 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 16 )
+
+[node name="Arrow-leftNoOutline" type="Sprite" parent="leveldesign"]
+position = Vector2( 271.6, 169.6 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Arrow-rightNoOutline" type="Sprite" parent="leveldesign"]
+position = Vector2( 299.6, 169.6 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 18 )
 
 [node name="background" parent="." instance=ExtResource( 1 )]
 
